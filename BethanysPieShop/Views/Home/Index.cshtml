@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model BethanysPieShop.ViewModels.HomeViewModel
+<!DOCTYPE html>
 <html>
 <head>
     <title>Index</title>
@@ -6,6 +7,15 @@
 <body>
     <div>
         @ViewBag.Message
+    </div>
+    <div>
+        @foreach (var pie in Model.Pies)
+        {
+            <div>
+                <h2>@pie.Name</h2>
+                <h3>@pie.Price.ToString("c")</h3>
+            </div>
+        }
     </div>
 </body>
 </html>
