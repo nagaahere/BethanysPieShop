@@ -15,12 +15,12 @@ namespace BethanysPieShop
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
-        {
-            //register framework services
-            services.AddMvc();
-
+        { 
             //register our own services
             services.AddTransient<IPieRepository, MockPieRepository>();
+            
+            //register framework services
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -29,7 +29,8 @@ namespace BethanysPieShop
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
             app.UseStaticFiles();
-            app.UseDefaultFiles();
+
+            app.UseMvcWithDefaultRoute();
             //if (env.IsDevelopment())
             //{
             //    app.UseDeveloperExceptionPage();
