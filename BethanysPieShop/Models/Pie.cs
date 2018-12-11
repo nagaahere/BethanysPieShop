@@ -15,6 +15,7 @@ namespace BethanysPieShop.Models
         public string ImageUrl { get; set; }
         public string ImageThumbnailUrl { get; set; }
         public bool IsPieOfTheWeek { get; set; }
+        public bool InStock { get; set; }
 
     }
 }
