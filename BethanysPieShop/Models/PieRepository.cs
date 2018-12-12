@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace BethanysPieShop.Models
 {
-    public class PieRepository:IPieRepository
+    public class PieRepository: IPieRepository
     {
         private readonly AppDbContext _appDbContext;
 
